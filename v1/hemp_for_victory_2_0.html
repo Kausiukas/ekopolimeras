@@ -42,8 +42,13 @@
             <p>Discover our latest initiative aimed at promoting sustainable practices through innovative hemp solutions.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Ekopolimeras. All rights reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
